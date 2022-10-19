@@ -1,4 +1,3 @@
-import * as React from "react";
 import Card from "@mui/joy/Card";
 import ButtonBase from "@mui/material/ButtonBase";
 import CardCover from "@mui/joy/CardCover";
@@ -8,8 +7,8 @@ import Grid from "@mui/material/Grid";
 
 function BasicCard(props) {
   return (
-    <ButtonBase sx={{ mx: 2, my: 2 }}>
-      <Card raised="ture" sx={{ width: 300, height: 350 }}>
+    <ButtonBase sx={{ mx: 1, my: 2 }}>
+      <Card raised="ture" sx={{ width: 200, height: 250 }}>
         <CardCover>
           <img
             src={props.logo}
@@ -27,13 +26,13 @@ function BasicCard(props) {
           <Grid
             container
             rowSpacing={1}
-            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+            columnSpacing={{ xs: 1, sm: 2, md: 1 }}
           >
             <Grid item xs={12}>
               <Typography
                 sx={{
                   fontWeight: "bold",
-                  fontSize: 30,
+                  fontSize: 20,
                   textTransform: "capitalize",
                   border: 1,
                   borderRadius: "10px",
@@ -52,7 +51,7 @@ function BasicCard(props) {
                 sx={{
                   textTransform: "capitalize",
                   fontWeight: "regular",
-                  fontSize: 20,
+                  fontSize: 12,
                   border: 1,
                   borderRadius: "10px",
                   borderColor: "grey.500",
@@ -68,7 +67,7 @@ function BasicCard(props) {
                 sx={{
                   textTransform: "capitalize",
                   fontWeight: "regular",
-                  fontSize: 20,
+                  fontSize: 12,
                   border: 1,
                   borderRadius: "10px",
                 }}
@@ -83,7 +82,7 @@ function BasicCard(props) {
                 sx={{
                   textTransform: "capitalize",
                   fontWeight: "light",
-                  fontSize: 15,
+                  fontSize: 12,
                   fontStyle: "italic",
                   border: 1,
                   borderRadius: "7px",
