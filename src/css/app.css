@@ -1,0 +1,30 @@
+.boxed{
+    border: 1px;
+    border-radius: 15px;
+    border-color: black;
+    border-style: double;
+    margin: auto;
+    width: fit-content;
+    padding: 20px;
+    margin:10px
+    
+}
+
+.default{
+
+    font-size: xx-large;
+}
+
+.formTitle{
+    font-weight: bold;
+}
+
+.create{
+    display: flex;
+    flex-direction: row;
+}
+
+.show{
+    display: flex;
+    flex-direction: row;
+}

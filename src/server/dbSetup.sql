@@ -51,11 +51,11 @@ INSERT INTO users(username) VALUES
 CREATE TABLE campaigns(
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	NAME VARCHAR(255),
-	creator INT,
-	FOREIGN KEY (creator) REFERENCES users(id) 
+	creatorId INT,
+	FOREIGN KEY (creatorId) REFERENCES users(id) 
 );
 
-INSERT INTO campaigns(NAME, creator) VALUES 
+INSERT INTO campaigns(NAME, creatorId) VALUES 
 	('Valem', 1),
 	('Realm', 5),
 	('Menethil', 5),
