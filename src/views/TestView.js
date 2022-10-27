@@ -1,4 +1,3 @@
-import TestRender from "../Components/TestRender";
 import CreateUser from '../Components/CreateUser';
 import CreateCampaign from '../Components/CreateCampaign';
 import GetUsers from '../Components/GetUsers';
@@ -11,7 +10,6 @@ function Landing(props) {
     
     return (
         <div>
-            <TestRender/>
             <div className="create">
                 <CreateUser/>
                 <CreateCampaign/>

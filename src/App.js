@@ -1,13 +1,14 @@
 import React from "react";
 import Paper from "@mui/material/Card";
-import Landing from "./views/landing";
+import TestView from "./views/TestView";
+import LandingView from './views/LandingView';
 import './css/app.css'
+
+import BasicCard from './Components/BasicCard'
 
 function App() {
   return (
-    <Paper>
-      <Landing />
-    </Paper>
+      <LandingView />
   );
 }
 

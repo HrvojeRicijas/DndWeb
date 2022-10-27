@@ -4,11 +4,12 @@ import CardCover from "@mui/joy/CardCover";
 import Typography from "@mui/joy/Typography";
 import CardContent from "@mui/joy/CardContent";
 import Grid from "@mui/material/Grid";
+import "../css/app.css";
 
 function BasicCard(props) {
   return (
-    <ButtonBase sx={{ mx: 1, my: 2 }}>
-      <Card raised="ture" sx={{ width: 200, height: 250 }}>
+    <ButtonBase>
+      <Card raised="ture" sx={{ height: "100%", width: "100%" }}>
         <CardCover>
           <img
             src={props.logo}
