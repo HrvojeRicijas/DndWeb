@@ -38,8 +38,7 @@ Axios.post('http://localhost:3002/api/characters/create', {name:name, race:race,
 
                 <div>
                 <label>Class: </label>
-                    <ClassesDropdown  onChange={(e)=> {
-                        console.log(e.target.value)
+                    <input type="number"  onChange={(e)=> {
                         setClassId(e.target.value)
                     }}/>
                 </div>
