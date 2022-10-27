@@ -10,6 +10,7 @@ useEffect(()=>{
 Axios.get("http://localhost:3002/api/characters/get").then((data)=>{
     console.log(data)
     setCharacterList(data.data)
+    console.log(data.data[0])
 });
 },[])
 
