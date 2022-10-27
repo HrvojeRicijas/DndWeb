@@ -23,7 +23,7 @@ app.post('/api/users/create', (req,res)=> {
 //READ
 app.get('/api/users/get', (req,res)=> {
 
-    db.query("SELECT * from USERS", (err,result)=>{
+    db.query("SELECT * FROM users", (err,result)=>{
        if(err) {
        console.log(err)
        } 
@@ -32,17 +32,17 @@ app.get('/api/users/get', (req,res)=> {
     });   })
 
 //SELECT
-app.post('/api/users/getById', (req,res)=> {
+app.get('/api/users/getById', (req,res)=> {
     
     const id = req.params.id;
     
-    db.query("SELECT * FROM testtable WHERE id = ?", id, 
- (err,result)=>{
-    if(err) {
-    console.log(err)
-    } 
-    res.send(result)
-    });   });
+    db.query("SELECT * FROM users WHERE id = ?", id, (err,result)=>{
+        if(err) {
+            console.log(err)
+        } 
+        res.send(result)
+    });   
+});
 
 
 //UPDATE unfinished
@@ -86,8 +86,33 @@ app.get('/api/campaigns/get', (req,res)=> {
     });   })
 
 //SELECT
+app.get('/api/campaigns/getById', (req,res)=> {
+    
+    const id = req.params.id;
+    
+    db.query("SELECT * FROM campaigns WHERE id = ?", id, (err,result)=>{
+        if(err) {
+            console.log(err)
+        } 
+        res.send(result)
+    });   
+});
 //UPDATE
 //DELETE
+
+//  CLASSES -------------------------------------------------------------------------
+
+//READ
+app.get('/api/classes/get', (req,res)=> {
+
+    db.query("SELECT * from classes", (err,result)=>{
+       if(err) {
+       console.log(err)
+       } 
+       console.log(result)
+       res.send(result)
+    });   })
+
 
 
 //  CHARACTERS -------------------------------------------------------------------------
@@ -137,10 +162,21 @@ app.get('/api/characters/get', (req,res)=> {
     });   })
 
 //SELECT
+app.get('/api/characters/getById', (req,res)=> {
+    
+    const id = req.params.id;
+    
+    db.query("SELECT * FROM characters WHERE id = ?", id, (err,result)=>{
+        if(err) {
+            console.log(err)
+        } 
+        res.send(result)
+    });   
+});
 //UPDATE
 //DELETE
 
-//Bellow there is only lies, deception and testing
+//Below there is only lies, deception and testing
 
 // Route to get all posts
 app.get("/api/get", (req,res)=>{

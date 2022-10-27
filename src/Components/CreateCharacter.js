@@ -1,6 +1,8 @@
 import React,{useState} from 'react';
 import Axios from 'axios'
 import '../css/app.css'
+import ClassesDropdown from './ClassesDropdown';
+
 function CreateCharacter() {
 
     const [name, setName] = useState("");
@@ -36,7 +38,8 @@ Axios.post('http://localhost:3002/api/characters/create', {name:name, race:race,
 
                 <div>
                 <label>Class: </label>
-                    <input type="number" onChange={(e)=> {
+                    <ClassesDropdown  onChange={(e)=> {
+                        console.log(e.target.value)
                         setClassId(e.target.value)
                     }}/>
                 </div>
