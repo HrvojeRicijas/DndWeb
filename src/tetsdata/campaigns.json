@@ -2,36 +2,43 @@
     {
         "name": "Alrune",
         "DM": "Dezan",
-        "key": "0"
+        "id": "0",
+        "logo": "Nix.jpeg"
     },
     {
         "name": "Menethil",
         "DM": "Dezan",
-        "key": "1"
+        "id": "1",
+        "logo": "Nix.jpeg"
     },
     {
         "name": "Totally not Menethil",
         "DM": "Dezan",
-        "key": "2"
+        "id": "2",
+        "logo": "Nix.jpeg"
     },
     {
         "name": "Totally not Menethil",
         "DM": "Dezan",
-        "key": "3"
+        "id": "3",
+        "logo": "Nix.jpeg"
     },
     {
         "name": "Totally not Menethil",
         "DM": "Dezan",
-        "key": "4"
+        "id": "4",
+        "logo": "Nix.jpeg"
     },
     {
         "name": "Mercs of the calla",
         "DM": "Dezan",
-        "key": "5"
+        "id": "5",
+        "logo": "Nix.jpeg"
     },
     {
         "name": "Totally not Menethil",
         "DM": "Dezan",
-        "key": "6"
+        "id": "6",
+        "logo": "Nix.jpeg"
     }
 ]
