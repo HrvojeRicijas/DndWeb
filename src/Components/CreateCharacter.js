@@ -74,9 +74,7 @@ Axios.post('http://localhost:3002/api/characters/create', {name:name, race:race,
 
                 <div>
                 <label>Image: </label>
-                    <input type="file"  onChange={(e)=> {
-                        setDescription(e.target.value)
-                    }}/>
+                    <input type="file" onChange={(e)=> {console.log("Image:",e)}}/>
                 </div>
 
                 <button onClick={submitPost}>Create a Character</button>

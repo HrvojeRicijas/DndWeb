@@ -6,14 +6,16 @@ import CardContent from "@mui/joy/CardContent";
 import Grid from "@mui/material/Grid";
 import "../css/app.css";
 
+
 function BasicCard(props) {
+  let logoDef = require(`../../public/Photos/${props.logo}`)
   return (
     <ButtonBase>
       <Card raised="ture" sx={{ height: "100%", width: "100%" }}>
         <CardCover>
           <img
-            src={props.logo}
-            srcSet={props.logo}
+            src={logoDef}
+            srcSet={logoDef}
             loading="lazy"
             alt="Character Portrait"
           />
