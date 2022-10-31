@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import Axios from 'axios'
 import '../css/app.css'
-import ClassesDropdown from './ClassesDropdown';
+//import ClassesDropdown from './ClassesDropdown';
 
 function CreateCharacter() {
 
@@ -12,10 +12,11 @@ function CreateCharacter() {
     const [creatorId, setCreatorId] = useState("");
     const [campaignId, setCampaignId] = useState("");
     const [description, setDescription] = useState("");
+    const [imagePath, setImagePath] = useState("");
 
 
 const submitPost = () => {
-Axios.post('http://localhost:3002/api/characters/create', {name:name, race:race, classId:classId, level:level, creatorId:creatorId, campaignId:campaignId, description:description})
+Axios.post('http://localhost:3002/api/characters/create', {name:name, race:race, classId:classId, level:level, creatorId:creatorId, campaignId:campaignId, description:description, imagePath:imagePath})
 }
 
     return (
@@ -70,6 +71,14 @@ Axios.post('http://localhost:3002/api/characters/create', {name:name, race:race,
                         setDescription(e.target.value)
                     }}/>
                 </div>
+
+                <div>
+                <label>Image: </label>
+                    <input type="file"  onChange={(e)=> {
+                        setDescription(e.target.value)
+                    }}/>
+                </div>
+
                 <button onClick={submitPost}>Create a Character</button>
             </div>
         </div>
