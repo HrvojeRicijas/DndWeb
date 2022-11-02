@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import "../css/app.css";
 
-function ClassesDropdown({ props }) {
+function ClassesDropdown( props ) {
   const [classList, setClassList] = useState([]);
 
   useEffect(() => {
