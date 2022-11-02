@@ -100,7 +100,7 @@ function TestRender(props) {
 
   return (
     <div>
-      <Grid container>
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={10}>
           {view}
         </Grid>

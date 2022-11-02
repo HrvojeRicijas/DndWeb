@@ -10,7 +10,7 @@ import "../css/app.css";
 function BasicCard(props) {
   let logoDef = require(`../../public/Photos/${props.logo}`)
   return (
-    <ButtonBase>
+    <ButtonBase sx={{width: "100%"}}>
       <Card raised="ture" sx={{ height: "100%", width: "100%" }}>
         <CardCover>
           <img
