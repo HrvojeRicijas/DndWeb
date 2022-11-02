@@ -5,12 +5,13 @@ import ClassesDropdown from "./ClassesDropdown";
 
 function CreateCharacter() {
   const [name, setName] = useState("");
-  const [race, setRace] = useState("");
-  const [classId, setClassId] = useState("1");
-  const [level, setLevel] = useState("");
-  const [creatorId, setCreatorId] = useState("");
-  const [campaignId, setCampaignId] = useState("");
-  const [description, setDescription] = useState("");
+    const [race, setRace] = useState("");
+    const [classId, setClassId] = useState("");
+    const [level, setLevel] = useState("");
+    const [creatorId, setCreatorId] = useState("");
+    const [campaignId, setCampaignId] = useState("");
+    const [description, setDescription] = useState("");
+    const [imagePath, setImagePath] = useState("");
 
   const submitPost = () => {
     Axios.post("http://localhost:3002/api/characters/create", {
@@ -21,12 +22,8 @@ function CreateCharacter() {
       creatorId: creatorId,
       campaignId: campaignId,
       description: description,
+      imagePath:imagePath
     });
-  };
-
-  const getClassDropdown = (selectedClass) => {
-    setClassId(selectedClass);
-    console.log("Class is selected!");
   };
 
   return (
@@ -103,6 +100,7 @@ function CreateCharacter() {
             type="file"
             onChange={(e) => {
               console.log("Image:", e);
+              setDescription(e.target.value)
             }}
           />
         </div>

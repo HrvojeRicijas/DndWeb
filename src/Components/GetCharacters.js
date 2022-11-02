@@ -8,8 +8,9 @@ const [characterList,setCharacterList] = useState([]);
 
 useEffect(()=>{
 Axios.get("http://localhost:3002/api/characters/get").then((data)=>{
-    console.log(data)
+    console.log("Ovo je sada bitno:")
     setCharacterList(data.data)
+    console.log(data.data[0].characterName)
 });
 },[])
 
