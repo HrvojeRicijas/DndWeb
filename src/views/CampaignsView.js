@@ -23,8 +23,8 @@ function Landing() {
       rowSpacing={1}
       sx={{ mx: 1, my: 1, gridAutoRows: "100px" }}
     >
-      {campaignList.map((data, key) => (
-        <Grid item xs={3} key={data.campaignId}>
+      {campaignList.map((data) => (
+        <Grid item xs={12} sm={6} md={4} lg={3} key={data.campaignId}>
           <ButtonBase sx={{ width: "100%" }}>
             <BasicCard
               logo="Nix.jpeg"

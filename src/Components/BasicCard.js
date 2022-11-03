@@ -42,7 +42,7 @@ function BasicCard(props) {
       <CardContent sx={{ justifyContent: "flex-end" }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 1 }}>
           <Grid item xs={12}>
-            <Typography
+            <Typography noWrap
               sx={{
                 fontWeight: "bold",
                 fontSize: 30 * ratio,

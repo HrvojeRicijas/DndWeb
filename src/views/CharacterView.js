@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import BasicCard from "./BasicCard";
-import BasicList from "./BasicList";
+import BasicCard from "../Components/BasicCard";
+import BasicList from "../Components/BasicList";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
-import logo1 from "../Photos/Nix.jpeg";
 
 function TestRender(props) {
   const [button, setButton] = useState(1);
@@ -27,70 +26,70 @@ function TestRender(props) {
             race="Changeling"
             class="Warlock"
             auth="Mark"
-            logo={logo1}
+            logo="Nix.jpeg"
           />
           <BasicCard
             name="nix"
             race="Changeling"
             class="Warlock"
             auth="Mark"
-            logo={logo1}
+            logo="Nix.jpeg"
           />
           <BasicCard
             name="nix"
             race="Changeling"
             class="Warlock"
             auth="Mark"
-            logo={logo1}
+            logo="Nix.jpeg"
           />
           <BasicCard
             name="nix"
             race="Changeling"
             class="Warlock"
             auth="Mark"
-            logo={logo1}
+            logo="Nix.jpeg"
           />
           <BasicCard
             name="nix"
             race="Changeling"
             class="Warlock"
             auth="Mark"
-            logo={logo1}
+            logo="Nix.jpeg"
           />
           <BasicCard
             name="nix"
             race="Changeling"
             class="Warlock"
             auth="Mark"
-            logo={logo1}
+            logo="Nix.jpeg"
           />
           <BasicCard
             name="nix"
             race="Changeling"
             class="Warlock"
             auth="Mark"
-            logo={logo1}
+            logo="Nix.jpeg"
           />
           <BasicCard
             name="nix"
             race="Changeling"
             class="Warlock"
             auth="Mark"
-            logo={logo1}
+            logo="Nix.jpeg"
           />
           <BasicCard
             name="nix"
             race="Changeling"
             class="Warlock"
             auth="Mark"
-            logo={logo1}
+            logo="Nix.jpeg"
           />
           <BasicCard
             name="nix"
             race="Changeling"
             class="Warlock"
             auth="Mark"
-            logo={logo1}
+            logo="Nix.jpeg"
           />
         </div>
       );
