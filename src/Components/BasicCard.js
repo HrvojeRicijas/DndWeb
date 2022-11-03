@@ -58,7 +58,7 @@ function BasicCard(props) {
             </Typography>
           </Grid>
           <Grid item xs={6}>
-            <Typography
+            <Typography noWrap
               flexDirection="row"
               textColor="#f2f2f2"
               sx={{
@@ -74,7 +74,7 @@ function BasicCard(props) {
             </Typography>
           </Grid>
           <Grid item xs={6}>
-            <Typography
+            <Typography noWrap
               flexDirection="row"
               textColor="#f2f2f2"
               sx={{
@@ -89,7 +89,7 @@ function BasicCard(props) {
             </Typography>
           </Grid>
           <Grid item xs={12}>
-            <Typography
+            <Typography noWrap
               flexDirection="row"
               textColor="red"
               sx={{

@@ -6,8 +6,8 @@
     margin: auto;
     width: fit-content;
     padding: 20px;
-    margin:10px
-    
+    margin:10px;
+    background-color: white;
 }
 
 .default{
@@ -29,6 +29,21 @@
     flex-direction: row;
 }
 
+.navbarContent {
+    padding-top: 3%;
+}
 
+.background {
+    height: 100vh;
+    width: 100vW;
+    margin: 0px;
+    background-image: url('../../public/Photos/background.jpg');
+    background-position: center;
+    background-size: cover;
+    overflow:hidden;
+}
 
+.navlink {
+    text-decoration: none;
+}
 

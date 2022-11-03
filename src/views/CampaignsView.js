@@ -4,9 +4,8 @@ import Grid from "@mui/material/Grid";
 import ButtonBase from "@mui/material/ButtonBase";
 import Axios from "axios";
 
-//import logo1 from "../Photos/Nix.jpeg";
 
-function Landing() {
+function CampaignsView() {
   const [campaignList, setCampaignList] = useState([]);
 
   useEffect(() => {
@@ -38,4 +37,4 @@ function Landing() {
   );
 }
 
-export default Landing;
+export default CampaignsView;
