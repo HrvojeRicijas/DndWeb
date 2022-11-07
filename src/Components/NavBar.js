@@ -12,7 +12,7 @@ const NavBar = () => {
   return (
     <HashRouter>
       <div className = "background">
-        <AppBar style={{ background: 'transparent'}}>
+        <AppBar >
           <ToolBar>
             <Typography color="primary">Dragon's Inn</Typography>
             <Button color="primary" size="large" variant="contained" sx={{ ml: "3%" }}>

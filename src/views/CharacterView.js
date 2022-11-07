@@ -3,6 +3,7 @@ import BasicCard from "../Components/BasicCard";
 import Grid from "@mui/material/Grid";
 import ButtonBase from "@mui/material/ButtonBase";
 import Axios from "axios";
+import BasicCardv2 from "../Components/BasicCardv2";
 
 
 function CharactersView() {
@@ -25,7 +26,7 @@ function CharactersView() {
       {characterList.map((data) => (
         <Grid item xs={12} sm={6} md={4} lg={3} key={data.characterId}>
           <ButtonBase sx={{ width: "100%" }}>
-            <BasicCard
+            <BasicCardv2
               logo="Nix.jpeg"
               name={data.characterName}
               auth={data.creatorName}

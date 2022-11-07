@@ -5,10 +5,18 @@ import CardContent from "@mui/joy/CardContent";
 import Grid from "@mui/material/Grid";
 import "../css/app.css";
 import React, { useState, useEffect } from "react";
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 function BasicCard(props) {
   let width = window.innerWidth;
   const [ratio, setRatio] = useState(width / 1920);
+
+  const theme = createTheme ({
+    palette: {
+      border: '#4a148c',
+      mainTetx: '#9c27b0'
+    },
+  })
 
   useEffect(() => {
     function handleWindowResize() {
@@ -25,14 +33,14 @@ function BasicCard(props) {
 
   let logoDef = require(`../../public/Photos/${props.logo}`);
   return (
-    <Card raised="ture" sx={{ width: "100%", paddingTop: "75%" }}>
-      <CardCover>
-        <img
-          src={logoDef}
-          srcSet={logoDef}
-          loading="lazy"
-          alt="Character Portrait"
-        />
+    <Card raised="ture" sx={{ width: "100%", paddingTop: "75%", overflow: "hidden", border: 4, borderRadius: "15px" }}>
+      <CardCover >
+          <img className = "basicCard-img"
+            src={logoDef}
+            srcSet={logoDef}
+            loading="lazy"
+            alt="Character Portrait"
+          />
       </CardCover>
       <CardCover
         sx={{
@@ -42,14 +50,15 @@ function BasicCard(props) {
       <CardContent sx={{ justifyContent: "flex-end" }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 1 }}>
           <Grid item xs={12}>
-            <Typography noWrap
+            <Typography
+              noWrap
               sx={{
                 fontWeight: "bold",
                 fontSize: 30 * ratio,
                 textTransform: "capitalize",
-                border: 1,
-                borderRadius: "10px",
-                borderColor: "grey.500",
+                border: 4,
+                borderRadius: "15px",
+                borderColor: "rgb(128, 72, 156)",
               }}
               textColor="#fff"
               mb={1}
@@ -58,7 +67,8 @@ function BasicCard(props) {
             </Typography>
           </Grid>
           <Grid item xs={6}>
-            <Typography noWrap
+            <Typography
+              noWrap
               flexDirection="row"
               textColor="#f2f2f2"
               sx={{
@@ -74,7 +84,8 @@ function BasicCard(props) {
             </Typography>
           </Grid>
           <Grid item xs={6}>
-            <Typography noWrap
+            <Typography
+              noWrap
               flexDirection="row"
               textColor="#f2f2f2"
               sx={{
@@ -89,7 +100,8 @@ function BasicCard(props) {
             </Typography>
           </Grid>
           <Grid item xs={12}>
-            <Typography noWrap
+            <Typography
+              noWrap
               flexDirection="row"
               textColor="red"
               sx={{
@@ -111,3 +123,13 @@ function BasicCard(props) {
 }
 
 export default BasicCard;
+
+
+/*
+const theme = createTheme ({
+    palette: {
+      border: '#4a148c',
+      mainTetx: '#9c27b0'
+    },
+  })
+*/

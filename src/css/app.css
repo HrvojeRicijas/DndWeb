@@ -30,7 +30,7 @@
 }
 
 .navbarContent {
-    padding-top: 3%;
+    padding-top: 5%;
 }
 
 .background {
@@ -40,10 +40,11 @@
     background-image: url('../../public/Photos/background.jpg');
     background-position: center;
     background-size: cover;
-    overflow:hidden;
+    overflow-x: hidden;
 }
 
 .navlink {
     text-decoration: none;
 }
+
 
