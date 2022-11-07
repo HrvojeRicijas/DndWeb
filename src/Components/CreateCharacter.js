@@ -11,7 +11,7 @@ function CreateCharacter() {
   const [creatorId, setCreatorId] = useState("");
   const [campaignId, setCampaignId] = useState("");
   const [description, setDescription] = useState("");
-  const [imagePath, setImagePath] = useState("");
+  const [image, setImage] = useState("");
 
   const submitPost = () => {
     Axios.post("http://localhost:3002/api/characters/create", {
@@ -22,7 +22,7 @@ function CreateCharacter() {
       creatorId: creatorId,
       campaignId: campaignId,
       description: description,
-      imagePath: imagePath,
+      image: image,
     });
   };
 
@@ -98,14 +98,17 @@ function CreateCharacter() {
             }}
           />
         </div>
+        
 
         <div>
           <label>Image: </label>
           <input
             type="file"
+            accept="image/*"
             onChange={(e) => {
               console.log("Image:", e);
-              setDescription(e.target.value);
+              setImage(e.target.files[0]);
+              console.log(e.target.files[0]);
             }}
           />
         </div>

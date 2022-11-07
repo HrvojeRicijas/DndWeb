@@ -126,7 +126,9 @@ app.post('/api/characters/create', (req,res)=> {
     const creatorId = req.body.creatorId;
     const campaignId = req.body.campaignId;
     const description = req.body.description;
-
+    const image = req.body.image;
+    const imageDestination = '../../public/Photos/characterImages'
+    console.log(image.height)
 
     db.query("INSERT INTO characters (name, race, classId, level, creatorId, campaignId, description) VALUES (?, ?, ?, ?, ?, ?, ?)",[name, race, classId, level, creatorId, campaignId, description], (err,result)=>{
        if(err) {
@@ -161,7 +163,7 @@ app.get('/api/characters/get', (req,res)=> {
        res.send(result)
     });   })
 
-//SELECT
+//SELECT by ID
 app.get('/api/characters/getById', (req,res)=> {
     
     const id = req.params.id;
@@ -173,6 +175,21 @@ app.get('/api/characters/getById', (req,res)=> {
         res.send(result)
     });   
 });
+
+//READ by CAMPAIGN
+app.get('/api/characters/getByCampaign', (req,res)=> {
+    
+    const campaignId = req.params.campaignId;
+    
+    db.query("SELECT * FROM characters WHERE campaignId = ?", campaignId, (err,result)=>{
+        if(err) {
+            console.log(err)
+        } 
+        res.send(result)
+    });   
+});
+
+
 //UPDATE
 //DELETE
 
