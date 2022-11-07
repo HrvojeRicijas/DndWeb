@@ -9,6 +9,7 @@ function ClassesDropdown( props ) {
     Axios.get("http://localhost:3002/api/classes/get").then((data) => {
       console.log(data);
       setClassList(data.data);
+      props.onClassFetch("1");
     });
   }, []);
 
@@ -18,7 +19,7 @@ function ClassesDropdown( props ) {
 
   return (
     <div>
-      <select name="classesSelect" onChange={selectHandler}>
+      <select name="classesSelect" onChange={selectHandler} >
         {classList.map((val, key) => {
           return (
             <option key={key} value={val.id}>
