@@ -8,7 +8,6 @@ const [campaignList,setCampaignList] = useState([]);
 
 useEffect(()=>{
 Axios.get("http://localhost:3002/api/campaigns/get").then((data)=>{
-    console.log(data)
     setCampaignList(data.data)
 });
 },[])

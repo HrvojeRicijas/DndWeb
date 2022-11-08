@@ -4,7 +4,6 @@ import Grid from "@mui/material/Grid";
 import ButtonBase from "@mui/material/ButtonBase";
 import Axios from "axios";
 import { Route, NavLink, Routes } from "react-router-dom";
-import CharacterPageView from "./CharacterPageView";
 
 function CharactersView(props) {
   const [characterList, setCharacterList] = useState([]);
