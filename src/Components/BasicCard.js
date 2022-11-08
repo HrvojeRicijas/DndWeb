@@ -6,6 +6,7 @@ import Grid from "@mui/material/Grid";
 import "../css/app.css";
 import React, { useState, useEffect } from "react";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { render } from "@testing-library/react";
 
 function BasicCard(props) {
   let width = window.innerWidth;
@@ -63,9 +64,10 @@ function BasicCard(props) {
               textColor="#fff"
               mb={1}
             >
-              {props.name}
+              {(props.name.length<25) ? props.name : props.name.slice(25).concat('...')}
             </Typography>
           </Grid>
+          {typeof props.race !== 'undefined' ?
           <Grid item xs={6}>
             <Typography
               noWrap
@@ -80,9 +82,9 @@ function BasicCard(props) {
                 borderColor: "grey.500",
               }}
             >
-              {props.race}
+              { (props.race.length<15) ? props.race : props.race.slice(0, 15).trim().concat('...')}
             </Typography>
-          </Grid>
+            </Grid> : ""}
           <Grid item xs={6}>
             <Typography
               noWrap

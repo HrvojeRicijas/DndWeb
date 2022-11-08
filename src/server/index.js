@@ -128,7 +128,7 @@ app.post('/api/characters/create', (req,res)=> {
     const description = req.body.description;
     const image = req.body.image;
 //    const imageDestination = '../../public/Photos/characterImages'
-    console.log(image.height)
+    console.log(i)
 
     db.query("INSERT INTO characters (name, race, classId, level, creatorId, campaignId, description) VALUES (?, ?, ?, ?, ?, ?, ?)",[name, race, classId, level, creatorId, campaignId, description], (err,result)=>{
        if(err) {

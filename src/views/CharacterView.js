@@ -5,13 +5,9 @@ import ButtonBase from "@mui/material/ButtonBase";
 import Axios from "axios";
 import { Route, NavLink, Routes } from "react-router-dom";
 
-function CharactersView(props) {
+function CharactersView() {
   const [characterList, setCharacterList] = useState([]);
 
-  function clickHandler (id) {
-    props.onCharacterClick(id);
-    console.log(id);
-  }
 
   let view = (
     characterList.map((data) => (
@@ -19,7 +15,6 @@ function CharactersView(props) {
         <NavLink className="cardlink" to={`CharacterPage/${data.characterId}`} >
           <ButtonBase
             sx={{ width: "100%" }}
-            onClick={() => clickHandler(data.characterId)}
           >
             <BasicCard
               logo="Nix.jpeg"

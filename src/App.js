@@ -13,22 +13,15 @@ import NavBar from './Components/NavBar';
 
 function App() {
 
-  const [characterId, setCharacterId] = useState("");
-
-  const getCharacterId = (id) => {
-    setCharacterId(id);
-    console.log("Ovo je u App",id);
-  }
-
   return (
     <div className="background">
     <Route path="/"><NavBar /></Route>
     <Route path="/Home"><HomeView/></Route>
     <Route path="/Campaigns"><CampaignView/></Route>
-    <Route path="/Characters"><CharacterView onCharacterClick={getCharacterId}/></Route>
+    <Route path="/Characters"><CharacterView/></Route>
     <Route path="/Compendium"><CompendiumView/></Route>
     <Route path="/Create"><CreateView/></Route>
-    <Route path="/CharacterPage"><CharacterPageView id={characterId}/></Route>
+    <Route path="/CharacterPage/:id"><CharacterPageView/></Route>
 </div>
   );
 }

@@ -1,14 +1,14 @@
 import Axios from "axios";
 import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 //import BasicCard from "../Components/BasicCard";
 
 const CharacterPageView = (props) => {
-  const params = new URLSearchParams(window.location.pathname);
-  console.log(params)
+  const { id } = useParams()
   const [characterInfo, setCharacterInfo] = useState([]);
+  console.log(id);
   useEffect(() => {
-    Axios.get(`http://localhost:3002/api/characters/getById/${props.id}`).then((data) => {
+    Axios.get(`http://localhost:3002/api/characters/getById/${id}`).then((data) => {
       
       setCharacterInfo(data.data[0]);
       console.log(data.data[0])
