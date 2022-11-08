@@ -1,16 +1,35 @@
-import React from "react";
-import TestView from "./views/CompendiumView";
-import LandingView from "./views/CampaignsView";
-import NavBar from './Components/NavBar'
+import React, { useState } from "react";
+import HomeView from './views/HomeView';
 import "./css/app.css";
-import Basiccardv2 from "./Components/BasicCardv2";
+import CharacterView from "./views/CharacterView";
+import CampaignView from "./views/CampaignsView";
+import CreateView from "./views/CreateView";
+import CharacterPageView from "./views/CharacterPageView";
+import CompendiumView from './views/CompendiumView';
+import { Route } from 'react-router-dom';
+import NavBar from './Components/NavBar';
+
 
 
 function App() {
+
+  const [characterId, setCharacterId] = useState("");
+
+  const getCharacterId = (id) => {
+    setCharacterId(id);
+    console.log("Ovo je u App",id);
+  }
+
   return (
-    <div>
-      <NavBar />
-    </div>
+    <div className="background">
+    <Route path="/"><NavBar /></Route>
+    <Route path="/Home"><HomeView/></Route>
+    <Route path="/Campaigns"><CampaignView/></Route>
+    <Route path="/Characters"><CharacterView onCharacterClick={getCharacterId}/></Route>
+    <Route path="/Compendium"><CompendiumView/></Route>
+    <Route path="/Create"><CreateView/></Route>
+    <Route path="/CharacterPage"><CharacterPageView id={characterId}/></Route>
+</div>
   );
 }
 

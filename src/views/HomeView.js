@@ -3,9 +3,7 @@ import '../css/app.css'
 const HomeView = () => {
     return (
         <div>
-            <div>
-                <b>HOME</b>
-            </div>
+           <h1>HOME</h1>
         </div>
     )
 }
