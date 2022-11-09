@@ -5,13 +5,13 @@ import ButtonBase from "@mui/material/ButtonBase";
 import Axios from "axios";
 import { NavLink } from "react-router-dom";
 
-function CampaignsView() {
-  const [campaignList, setCampaignList] = useState([]);
+function CharactersView() {
+  const [characterList, setCharacterList] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://localhost:3002/api/campaigns/get").then((data) => {
+    Axios.get("http://localhost:3002/api/characters/get").then((data) => {
       console.log(data);
-      setCampaignList(data.data);
+      setCharacterList(data.data);
     });
   }, []);
 
@@ -26,17 +26,19 @@ function CampaignsView() {
         paddingRight: "10px",
       }}
     >
-      {campaignList.map((data) => (
-        <Grid item xs={12} sm={6} md={4} lg={3} key={data.campaignId}>
+      {characterList.map((data) => (
+        <Grid item xs={12} sm={6} md={4} lg={3} key={data.characterId}>
           <NavLink
             className="cardlink"
-            to={`CharacterPage/${data.campaignId}`}
+            to={`CharacterPage/${data.characterId}`}
           >
             <ButtonBase sx={{ width: "100%" }}>
               <BasicCard
                 logo="Nix.jpeg"
-                name={data.camapignName}
+                name={data.characterName}
                 auth={data.creatorName}
+                class={data.classId}
+                race={data.race}
               />
             </ButtonBase>
           </NavLink>
@@ -46,4 +48,4 @@ function CampaignsView() {
   );
 }
 
-export default CampaignsView;
+export default CharactersView;

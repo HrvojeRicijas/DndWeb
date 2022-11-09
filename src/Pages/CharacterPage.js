@@ -1,12 +1,12 @@
 import Axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"
-//import BasicCard from "../Components/BasicCard";
+import { useParams } from "react-router-dom";
+import NavBar from "../Components/NavBar";
 
 const CharacterPageView = (props) => {
   const { id } = useParams()
   const [characterInfo, setCharacterInfo] = useState([]);
-  console.log(id);
+
   useEffect(() => {
     Axios.get(`http://localhost:3002/api/characters/getById/${id}`).then((data) => {
       
@@ -17,7 +17,9 @@ const CharacterPageView = (props) => {
 
   return (
     <div>
-      <h1>{characterInfo.id}</h1>
+      <NavBar />
+      <div className="navbar-padding"></div>
+        <h1>{characterInfo.NAME}</h1>
     </div>
   );
 };

@@ -5,19 +5,10 @@ import CardContent from "@mui/joy/CardContent";
 import Grid from "@mui/material/Grid";
 import "../css/app.css";
 import React, { useState, useEffect } from "react";
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { render } from "@testing-library/react";
 
 function BasicCard(props) {
   let width = window.innerWidth;
   const [ratio, setRatio] = useState(width / 1920);
-
-  const theme = createTheme ({
-    palette: {
-      border: '#4a148c',
-      mainTetx: '#9c27b0'
-    },
-  })
 
   useEffect(() => {
     function handleWindowResize() {
@@ -64,7 +55,7 @@ function BasicCard(props) {
               textColor="#fff"
               mb={1}
             >
-              {(props.name.length<25) ? props.name : props.name.slice(25).concat('...')}
+              {(props.name.length<25) ? props.name : props.name.slice(0, 15).concat('...')}
             </Typography>
           </Grid>
           {typeof props.race !== 'undefined' ?
@@ -85,6 +76,7 @@ function BasicCard(props) {
               { (props.race.length<15) ? props.race : props.race.slice(0, 15).trim().concat('...')}
             </Typography>
             </Grid> : ""}
+            {typeof props.class !== 'undefined' ? 
           <Grid item xs={6}>
             <Typography
               noWrap
@@ -98,9 +90,9 @@ function BasicCard(props) {
                 borderRadius: "10px",
               }}
             >
-              {props.class}
+              { (props.class.length<15) ? props.class : props.class}
             </Typography>
-          </Grid>
+          </Grid> : ""}
           <Grid item xs={12}>
             <Typography
               noWrap

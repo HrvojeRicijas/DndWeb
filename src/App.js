@@ -1,33 +1,36 @@
-import React, { useState } from "react";
-import HomeView from './views/HomeView';
+import HomePage from "./Pages/HomePage";
 import "./css/app.css";
-import CharacterView from "./views/CharacterView";
-import CampaignView from "./views/CampaignsView";
-import CreateView from "./views/CreateView";
-import CharacterPageView from "./views/CharacterPageView";
-import CompendiumView from './views/CompendiumView';
-import { Route } from 'react-router-dom';
-import NavBar from './Components/NavBar';
-
-
+import AllCharactersPage from "./Pages/AllCharactersPage";
+import AllCampaignsPage from "./Pages/AllCampaignsPage";
+import CreatePage from "./Pages/CreatePage";
+import CharacterPage from "./Pages/CharacterPage";
+import CompendiumPage from "./Pages/CompendiumPage";
+import { Route } from "react-router-dom";
+import NavBar from "./Components/NavBar";
 
 function App() {
-
   return (
-    <div className="background">
-    <Route path="/"><NavBar /></Route>
-    <Route path="/Home"><HomeView/></Route>
-    <Route path="/Campaigns"><CampaignView/></Route>
-    <Route path="/Characters"><CharacterView/></Route>
-    <Route path="/Compendium"><CompendiumView/></Route>
-    <Route path="/Create"><CreateView/></Route>
-    <Route path="/CharacterPage/:id"><CharacterPageView/></Route>
-</div>
+    <div className="scroll">
+      <Route exact path="/">
+        <HomePage />
+      </Route>
+      <Route path="/Campaigns">
+        <AllCampaignsPage />
+      </Route>
+      <Route path="/Characters">
+        <AllCharactersPage />
+      </Route>
+      <Route path="/Compendium">
+        <CompendiumPage />
+      </Route>
+      <Route path="/Create">
+        <CreatePage />
+      </Route>
+      <Route path="/CharacterPage/:id">
+        <CharacterPage />
+      </Route>
+    </div>
   );
 }
 
 export default App;
-
-/*
-<Basiccardv2 logo="Nix.jpeg" name="Meneld Starforge" auth="Mark" class="Fighter" />
-*/

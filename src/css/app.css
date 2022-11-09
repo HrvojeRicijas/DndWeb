@@ -29,20 +29,6 @@
     flex-direction: row;
 }
 
-.navbar {
-    padding-top: 5%;
-}
-
-.background {
-    height: 100vh;
-    width: 100vW;
-    margin: 0px;
-    background-image: url('../../public/Photos/background.jpg');
-    background-position: center;
-    background-size: cover;
-    overflow-x: hidden;
-}
-
 .navlink {
     text-decoration: none;
     padding-left: 3%;
@@ -58,3 +44,24 @@
     text-decoration: none;
 }
 
+.navbar-padding {
+    background-color: black;
+    height: 64px;
+    margin-bottom: 10px;
+}
+
+.scroll {
+    margin: 0;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+  
+  .scroll::-webkit-scrollbar-track {
+    background: #1e1e24;
+  }
+  
+  .scroll::-webkit-scrollbar-thumb {
+    background: #6649b8;
+  }

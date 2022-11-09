@@ -1,17 +1,17 @@
 import "../css/app.css";
-import { AppBar, Typography, Button } from "@mui/material/";
+import { AppBar, Typography } from "@mui/material/";
 import ToolBar from "@mui/material/Toolbar";
-import { Route, NavLink, HashRouter, Routes } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 const NavBar = () => {
   return (
-      <div className="navbar">
+      <div>
         <AppBar>
           <ToolBar>
             <Typography fontSize={20}>Dragon's Inn</Typography>
 
-            <NavLink to="/Home" className="navlink">
+            <NavLink to="/" className="navlink">
               <button>Home</button>
             </NavLink>
 
