@@ -1,5 +1,5 @@
 :root {
-  font-size: 16px;
+  font-size: 1vw;
   font-family: 'Open Sans';
   --text-primary: #b6b6b6;
   --text-secondary: #ececec;
@@ -30,7 +30,7 @@
 main {
   margin-left: 5rem;
   padding: 1rem;
-  background-color: #0202fc;  /* HERE */
+  background-color: #ffffff;  /* HERE */
 }
 
 .navbar {
@@ -86,11 +86,11 @@ main {
 }
 
 .fa-primary {
-  color: #ff7eee;
+  color: #4b0101;
 }
 
 .fa-secondary {
-  color: #df49a6;
+  color: #fd3131;
 }
 
 .fa-primary,
@@ -105,8 +105,8 @@ main {
   text-align: center;
   color: var(--text-secondary);
   background: var(--bg-secondary);
-  font-size: 1.5rem;
-  letter-spacing: 0.3ch;
+  font-size: 0.8rem;
+  letter-spacing: 0.2ch;
   width: 100%;
 }
 

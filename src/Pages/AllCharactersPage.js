@@ -1,13 +1,12 @@
-import NavBar from "../Components/NavBar";
+import TopNavbar from "../Components/TopNavbar";
 import CharactersView from "../views/CharactersView";
 import "../css/app.css";
 
 const AllCharactersPage = () => {
   return (
     <div>
-      <NavBar />
-      <div className="navbar-padding"></div>
-        <CharactersView />
+      <TopNavbar />
+      <CharactersView />
     </div>
   );
 };

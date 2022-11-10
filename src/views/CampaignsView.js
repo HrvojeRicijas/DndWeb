@@ -30,7 +30,7 @@ function CampaignsView() {
         <Grid item xs={12} sm={6} md={4} lg={3} key={data.campaignId}>
           <NavLink
             className="cardlink"
-            to={`CharacterPage/${data.campaignId}`}
+            to={`CampaignPage/${data.campaignId}`}
           >
             <ButtonBase sx={{ width: "100%" }}>
               <BasicCard

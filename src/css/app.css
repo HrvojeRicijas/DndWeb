@@ -31,7 +31,6 @@
 
 .navlink {
     text-decoration: none;
-    padding-left: 3%;
 }
 
 .basicCard-img {
@@ -46,7 +45,7 @@
 
 .navbar-padding {
     background-color: black;
-    height: 64px;
+    height: 5rem;
     margin-bottom: 10px;
 }
 
@@ -65,3 +64,10 @@
   .scroll::-webkit-scrollbar-thumb {
     background: #6649b8;
   }
+
+
+.navbar-spacing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

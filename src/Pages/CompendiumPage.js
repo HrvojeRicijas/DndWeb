@@ -1,13 +1,12 @@
-import NavBar from "../Components/NavBar";
+import TopNavbar from "../Components/TopNavbar";
 import CompendiumView from "../views/CompendiumView";
 import "../css/app.css";
 
 const CompendiumPage = () => {
   return (
     <div>
-      <NavBar />
-      <div className="navbar-padding"></div>
-        <CompendiumView />
+      <TopNavbar />
+      <CompendiumView />
     </div>
   );
 };

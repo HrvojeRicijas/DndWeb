@@ -1,13 +1,12 @@
-import NavBar from "../Components/NavBar";
+import TopNavbar from "../Components/TopNavbar";
 import CampaignsView from "../views/CampaignsView";
 import "../css/app.css";
 
 const AllCampaignsPage = () => {
   return (
     <div>
-      <NavBar />
-      <div className="navbar-padding"></div>
-        <CampaignsView />
+      <TopNavbar />
+      <CampaignsView />
     </div>
   );
 };

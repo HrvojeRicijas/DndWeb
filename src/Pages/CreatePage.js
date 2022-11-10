@@ -1,13 +1,12 @@
-import NavBar from "../Components/NavBar";
+import TopNavbar from "../Components/TopNavbar";
 import CreateView from "../views/CreateView";
 import "../css/app.css";
 
 const CreatePage = () => {
   return (
     <div>
-      <NavBar />
-      <div className="navbar-padding"></div>
-        <CreateView />
+      <TopNavbar />
+      <CreateView />
     </div>
   );
 };
