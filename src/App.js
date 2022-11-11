@@ -10,7 +10,7 @@ import { Scrollbars } from 'react-custom-scrollbars';
 
 function App() {
   return (
-    <Scrollbars style={{ width: "100vw", height: "100vh" }}>
+    <Scrollbars style={{ width: "100vw", height: "100vh" }} className="background">
       <Route exact path="/">
         <HomePage />
       </Route>

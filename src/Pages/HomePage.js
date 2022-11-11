@@ -158,7 +158,7 @@ const HomePage = () => {
     </ul>
   </nav>
 
-  <main></main>
+  <main>OVO je tekst</main>
     
 </div>
     )
