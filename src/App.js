@@ -6,11 +6,11 @@ import CreatePage from "./Pages/CreatePage";
 import CharacterPage from "./Pages/CharacterPage";
 import CompendiumPage from "./Pages/CompendiumPage";
 import { Route } from "react-router-dom";
-import NavBar from "./Components/NavBar";
+import { Scrollbars } from 'react-custom-scrollbars';
 
 function App() {
   return (
-    <div className="scroll">
+    <Scrollbars style={{ width: "100vw", height: "100vh" }}>
       <Route exact path="/">
         <HomePage />
       </Route>
@@ -29,7 +29,7 @@ function App() {
       <Route path="/CharacterPage/:id">
         <CharacterPage />
       </Route>
-    </div>
+    </Scrollbars>
   );
 }
 
