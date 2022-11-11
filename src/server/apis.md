@@ -21,4 +21,7 @@
 #   get all campaigns
     Axios.get('http://localhost:3002/api/campaigns/get')
 
+
+Trebam jedan call koji mi daje cijelog charactera i odmah mi pljune ime klase, autora i kampanje da ne radim 3 get requesta
+
     

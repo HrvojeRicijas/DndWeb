@@ -4,24 +4,8 @@ import Typography from "@mui/joy/Typography";
 import CardContent from "@mui/joy/CardContent";
 import Grid from "@mui/material/Grid";
 import "../css/app.css";
-import React, { useState, useEffect } from "react";
 
 function BasicCard(props) {
-  let width = window.innerWidth;
-  const [ratio, setRatio] = useState(width / 1920);
-
-  useEffect(() => {
-    function handleWindowResize() {
-      width = window.innerWidth;
-      setRatio(width / 1920);
-    }
-
-    window.addEventListener("resize", handleWindowResize);
-
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
 
   let logoDef = require(`../../public/Photos/${props.logo}`);
   return (
@@ -29,9 +13,8 @@ function BasicCard(props) {
       <CardCover >
           <img className = "basicCard-img"
             src={logoDef}
-            srcSet={logoDef}
             loading="lazy"
-            alt="Character Portrait"
+            alt="Descriptive Portrait"
           />
       </CardCover>
       <CardCover
@@ -123,13 +106,3 @@ function BasicCard(props) {
 }
 
 export default BasicCard;
-
-
-/*
-const theme = createTheme ({
-    palette: {
-      border: '#4a148c',
-      mainTetx: '#9c27b0'
-    },
-  })
-*/
