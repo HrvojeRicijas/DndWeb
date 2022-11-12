@@ -158,7 +158,7 @@ const HomePage = () => {
     </ul>
   </nav>
 
-  <main>OVO je tekst</main>
+  <main>This page will be full of text</main>
     
 </div>
     )

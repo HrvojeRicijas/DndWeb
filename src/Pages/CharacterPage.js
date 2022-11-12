@@ -49,7 +49,7 @@ const CharacterPageView = (props) => {
               Merc of the Calla
             </li>
           </div>
-          <li>Description:</li>
+          <li className="text-left-right">Description:</li>
           <li className="text-description">
             Default Val was born and raised in the slums of the poor and old city of Neverwinter!
             His mother never loved himand since he was middle of the pack in everything he did and was,
