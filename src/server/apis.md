@@ -23,7 +23,6 @@
 
 
 Trebam jedan call koji mi daje cijelog charactera i odmah mi pljune ime klase, autora i kampanje da ne radim 3 get requesta
-Trebam get characters by campaignid
 Trebam get all characters i campaigns (ovo mogu bit dva request, kako god mislis da je bolje)
 
 
