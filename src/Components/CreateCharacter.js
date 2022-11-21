@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Axios from "axios";
 import "../css/app.css";
+import "../css/character-sheet.css";
 import ClassesDropdown from "./ClassesDropdown";
 
 function CreateCharacter() {
@@ -26,95 +27,85 @@ function CreateCharacter() {
     });
   };
 
+  const fileSelectedHandler = (event) => {
+    console.log(event.target.files[0].name);
+    setImage(event.target.files[0].name);
+  };
+
   const getClassDropdown = (selectedClass) => {
     setClassId(selectedClass);
     console.log(selectedClass);
-  }
+  };
 
   return (
-    <div>
-      <div className="boxed">
-        <span className="formTitle">Create a character:</span>
-        <div>
-          <label>Name: </label>
-          <input
-            type="text"
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
-          />
-        </div>
+    <div className="create-container">
+      <span className="formTitle">Create a character:</span>
+      <label>Name: </label>
+      <input
+        className="create-input"
+        type="text"
+        onChange={(e) => {
+          setName(e.target.value);
+        }}
+      />
 
-        <div>
-          <label>Race: </label>
-          <input
-            type="text"
-            onChange={(e) => {
-              setRace(e.target.value);
-            }}
-          />
-        </div>
+      <label>Race: </label>
+      <input
+        className="create-input"
+        type="text"
+        onChange={(e) => {
+          setRace(e.target.value);
+        }}
+      />
 
-        <div>
-          <label>Class: </label>
-          <ClassesDropdown onClassFetch={getClassDropdown} />
-        </div>
+      <label>Class: </label>
+      <ClassesDropdown onClassFetch={getClassDropdown} />
 
-        <div>
-          <label>Level: </label>
-          <input
-            type="number"
-            onChange={(e) => {
-              setLevel(e.target.value);
-            }}
-          />
-        </div>
+      <label>Level: </label>
+      <input
+        className="create-input"
+        type="number"
+        onChange={(e) => {
+          setLevel(e.target.value);
+        }}
+      />
 
-        <div>
-          <label>Creator:</label>
-          <input
-            type="number"
-            onChange={(e) => {
-              setCreatorId(e.target.value);
-            }}
-          />
-        </div>
+      <label>Creator:</label>
+      <input
+        className="create-input"
+        type="number"
+        onChange={(e) => {
+          setCreatorId(e.target.value);
+        }}
+      />
 
-        <div>
-          <label>Campaign: </label>
-          <input
-            type="number"
-            onChange={(e) => {
-              setCampaignId(e.target.value);
-            }}
-          />
-        </div>
+      <label>Campaign: </label>
+      <input
+        className="create-input"
+        type="number"
+        onChange={(e) => {
+          setCampaignId(e.target.value);
+        }}
+      />
 
-        <div>
-          <label>Description: </label>
-          <textarea
-            onChange={(e) => {
-              setDescription(e.target.value);
-            }}
-          />
-        </div>
-        
+      <label>Description: </label>
+      <textarea
+        className="create-input"
+        type="text"
+        onChange={(e) => {
+          setDescription(e.target.value);
+        }}
+      />
 
-        <div>
-          <label>Image: </label>
-          <input
-            type="file"
-            accept="image/*"
-            onChange={(e) => {
-              console.log("Image:", e);
-              setImage(e.target.files[0]);
-              console.log(e.target.files[0]);
-            }}
-          />
-        </div>
+      <label>Image: </label>
+      <input
+        className="create-file"
+        type="file"
+        accept="image/*"
+        onChange={fileSelectedHandler}
+      />
 
-        <button onClick={submitPost}>Create a Character</button>
-      </div>
+      <button onClick={submitPost} className="create-button">Create</button>
     </div>
   );
 }

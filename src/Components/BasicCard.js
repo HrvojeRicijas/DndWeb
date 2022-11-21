@@ -9,7 +9,7 @@ function BasicCard(props) {
 
   let logoDef = require(`../../public/Photos/${props.logo}`);
   return (
-    <Card raised="ture" sx={{ width: "100%", paddingTop: "75%", overflow: "hidden", border: 4, borderRadius: "15px", borderColor: "black" }}>
+    <Card sx={{ width: "100%", paddingTop: "75%", overflow: "hidden", border: 4, borderRadius: "15px", borderColor: "black" }} className="card">
       <CardCover >
           <img className = "basicCard-img"
             src={logoDef}

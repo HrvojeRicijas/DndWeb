@@ -19,7 +19,7 @@ function ClassesDropdown( props ) {
 
   return (
     <div>
-      <select name="classesSelect" onChange={selectHandler} >
+      <select name="classesSelect" onChange={selectHandler} className="create-select">
         {classList.map((val, key) => {
           return (
             <option key={key} value={val.id}>

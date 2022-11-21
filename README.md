@@ -9,6 +9,4 @@ To come:
     -Compendium page
 
 Work in progress:
-    -Create page (where you will select what you want to create)
-        -Character create page
-        -Campaign create page
+    -
