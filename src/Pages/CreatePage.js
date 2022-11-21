@@ -6,6 +6,7 @@ const CreatePage = () => {
   return (
     <div>
       <TopNavbar />
+      <span className="create-page-title">Swipe left or right and start creating your character, or your campaign!</span>
       <CreateView />
     </div>
   );

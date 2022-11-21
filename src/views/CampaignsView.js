@@ -22,8 +22,7 @@ function CampaignsView() {
       rowSpacing={1}
       sx={{
         maxWidth: "100vw",
-        paddingLeft: "10px",
-        paddingRight: "10px",
+        padding: "10px"
       }}
     >
       {campaignList.map((data) => (

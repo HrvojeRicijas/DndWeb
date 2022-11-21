@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Axios from "axios";
 import "../css/app.css";
 import "../css/character-sheet.css";
-import ClassesDropdown from "./ClassesDropdown";
+import ClassesDropdown from "../Components/ClassesDropdown";
 
 function CreateCharacter() {
   const [name, setName] = useState("");

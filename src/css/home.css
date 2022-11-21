@@ -58,7 +58,7 @@ main {
   filter: grayscale(0%) opacity(1);
   background: var(--bg-secondary);
   color: var(--text-secondary);
-  transform: scale(1.2, 1.2);
+  transform: scale(1.1, 1.1);
 }
 
 .link-text {

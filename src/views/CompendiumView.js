@@ -1,6 +1,6 @@
-import GetUsers from '../Components/GetUsers';
-import GetCampaigns from '../Components/GetCampaigns';
-import GetCharacters from '../Components/GetCharacters';
+import GetUsers from '../service/GetUsers';
+import GetCampaigns from '../service/GetCampaigns';
+import GetCharacters from '../service/GetCharacters';
 import '../css/app.css'
 
 function CompendiumView(props) {

@@ -1,164 +1,187 @@
 :root {
-    font-size: 1vw;
-    font-family: 'Open Sans';
-    --text-primary: #b6b6b6;
-    --text-secondary: #ececec;
-    --bg-primary: #23232e;
-    --bg-secondary: #141418;
-    --hover: #fd3131;
-  }
-  
-
-.boxed{
-    border: 1px;
-    border-radius: 15px;
-    border-color: black;
-    border-style: solid;
-    margin: 10px;
-    background-color: antiquewhite;
+  font-size: 1vw;
+  font-family: "Open Sans";
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --hover: #fd3131;
 }
 
-.default{
-
-    font-size: xx-large;
+.boxed {
+  border: 1px;
+  border-radius: 15px;
+  border-color: black;
+  border-style: solid;
+  margin: 10px;
+  background-color: antiquewhite;
 }
 
-.formTitle{
-    color: var(--text-secondary);
-    font-size: larger;
-    margin-bottom: 10px;
-    border: 2px;
-    border-radius: 20px;
-    border-style: solid;
-    border-color: var(--bg-secondary);
-    padding: 10px;
-    background-color: var(--bg-primary);
-    width: 50vw;
+.default {
+  font-size: xx-large;
 }
 
-.create{
-    display: flex;
-    flex-direction: row;
+.formTitle {
+  color: var(--text-secondary);
+  font-size: larger;
+  margin-bottom: 10px;
+  border: 2px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: var(--hover);
+  padding: 10px;
+  background-color: rgba(1, 1, 1, 0.5);
+  width: 50vw;
 }
 
-.show{
-    display: flex;
-    flex-direction: row;
+.create {
+  display: flex;
+  flex-direction: row;
+}
+
+.show {
+  display: flex;
+  flex-direction: row;
 }
 
 .navlink {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .basicCard-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.cardlink{
-    text-decoration: none;
+.cardlink {
+  text-decoration: none;
 }
 
 .background {
-    position: absolute;
-    background-image: url('../../public/Photos/background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  position: absolute;
+  background-image: url("../../public/Photos/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-
-
 .create-container {
-    list-style: none;
-    font-size: 1.6vw;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 10px;
+  list-style: none;
+  font-size: 1.6vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+  background-color: rgba(1, 1, 1, 0.5);
+  padding: 30px;
+  border-radius: 50px;
 }
 
 .create-input {
-    width: 50%;
+  width: 50%;
 }
 
 .create-select {
-    width: 25vw;
+  width: 25vw;
 }
 
-.create-select, .create-input {
-    background-color: var(--bg-secondary);
-    color: var(--text-primary);
-    padding: 0.5%;
-    font-size: large;
-    text-align: center;
-    border-radius: 5px;
-    transition: transform 0.3s;
-    box-shadow: 5px 10px #23232e;
+.create-select,
+.create-input {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  padding: 0.5%;
+  font-size: large;
+  text-align: center;
+  border-radius: 5px;
+  transition: transform 0.3s;
+  box-shadow: 5px 10px #23232e;
 }
 
-
-
-.create-select:focus, .create-input:focus, .create-select:hover, .create-input:hover, .create-file:focus, .create-file:hover{
-    background-color: var(--bg-primary);
-    color: var(--text-secondary);
-    transform: scale(1.2, 1.2);
+.create-select:focus,
+.create-input:focus,
+.create-select:hover,
+.create-input:hover,
+.create-file:focus,
+.create-file:hover {
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+  transform: scale(1.2, 1.2);
 }
 
 .create-file {
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: var(--bg-secondary);
-    color: var(--text-primary);
-    padding: 0.5%;
-    font-size: large;
-    text-align: center;
-    width: 50%;
-    transition: transform 0.3s;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  padding: 0.5%;
+  font-size: large;
+  text-align: center;
+  width: 50%;
+  transition: transform 0.3s;
 }
 
+.create-file::-webkit-file-upload-button {
+  visibility: hidden;
+}
 
-  .create-file::-webkit-file-upload-button {
-    visibility: hidden;
-  }
-
-  input::-webkit-outer-spin-button,
+input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
 .create-button {
-    margin: 1%;
-    height: 5vh;
-    width: 15vw;
-    font-size: large;
-    text-align: center;
-    background-color: var(--bg-secondary);
-    color: var(--text-primary);
-    cursor: pointer;
-    transition: transform 0.3s;
-    border-radius: 5px;
+  margin: 1%;
+  height: 5vh;
+  width: 15vw;
+  font-size: large;
+  text-align: center;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: transform 0.3s;
+  border-radius: 5px;
 }
 
 .create-button:hover {
-    background-color: var(--bg-primary);
-    color: var(--text-secondary);
-    transform: scale(1.3, 1.2);
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+  transform: scale(1.3, 1.2);
 }
 
 label {
-    color: var(--text-secondary);
-    margin-top: 5px;
+  color: var(--text-secondary);
+  margin-top: 5px;
 }
 
 .card {
-    z-index: 1;
+  z-index: 1;
+  transition: transform 0.4s, border-color 0.4s;
+  width: 100%;
+  overflow: hidden;
+  border: 5px;
+  border-radius: 15px;
+  border-color: black;
+  border-style: solid;
 }
 
 .card:hover {
-    transform: scale(1.1 , 1.1);
-    z-index: 2;
-    transition: transform 0.4s;
+  transform: scale(1.1, 1.1);
+  z-index: 2;
+  border-color: #fd3131;
+}
+
+.create-page-title {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(1, 1, 1, 0.5);
+    align-items: center;
+    color: var(--text-secondary);
+    font-size: 3vh;
+    margin-bottom: 10px;
+    border: 2px;
+    border-style: solid;
+    border-color: var(--hover);
+    padding: 10px;
 }
